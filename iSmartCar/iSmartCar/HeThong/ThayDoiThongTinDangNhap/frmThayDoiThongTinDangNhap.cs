@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace iSmartCar
 {
-    public partial class MainWindow : Form
+    public partial class frmThayDoiThongTinDangNhap : Form
     {
-        public MainWindow()
+        public frmThayDoiThongTinDangNhap()
         {
             InitializeComponent();
         }

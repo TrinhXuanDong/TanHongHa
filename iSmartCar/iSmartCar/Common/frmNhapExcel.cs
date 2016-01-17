@@ -6,13 +6,18 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace iSmartCar
+namespace iSmartCar.Common
 {
-    public partial class MainWindow : Form
+    public partial class frmNhapExcel : Form
     {
-        public MainWindow()
+        public frmNhapExcel()
         {
             InitializeComponent();
+        }
+
+        private void frmNhapExcel_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

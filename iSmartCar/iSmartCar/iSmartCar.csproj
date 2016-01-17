@@ -43,6 +43,30 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
       <HintPath>F:\QuanLyBaoDuongXe_04232015\QuanLyBaoDuongXe\bin\Debug\Microsoft.Office.Interop.Excel.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\05. My document\04. San pham lam ra\DongTX.Core\DongTX.Core\bin\Release\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfoExtended, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\05. My document\04. San pham lam ra\DongTX.Core\DongTX.Core\bin\Release\Microsoft.SqlServer.ConnectionInfoExtended.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Dmf, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\05. My document\04. San pham lam ra\DongTX.Core\DongTX.Core\bin\Release\Microsoft.SqlServer.Dmf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\05. My document\04. San pham lam ra\DongTX.Core\DongTX.Core\bin\Release\Microsoft.SqlServer.Management.Sdk.Sfc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Smo, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\05. My document\04. San pham lam ra\DongTX.Core\DongTX.Core\bin\Release\Microsoft.SqlServer.Smo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SmoExtended, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\05. My document\04. San pham lam ra\DongTX.Core\DongTX.Core\bin\Release\Microsoft.SqlServer.SmoExtended.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -51,7 +75,53 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\frmNhapExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\frmNhapExcel.Designer.cs">
+      <DependentUpon>frmNhapExcel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\frmThongTinPhanMem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\frmThongTinPhanMem.Designer.cs">
+      <DependentUpon>frmThongTinPhanMem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Common\GuiResInfoMng.cs" />
+    <Compile Include="Common\IniFile.cs" />
+    <Compile Include="Common\MyDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\DanhMucXe\frmDanhSachXe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\DanhMucXe\frmDanhSachXe.Designer.cs">
+      <DependentUpon>frmDanhSachXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\DanhMucXe\frmThemSuaXe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\DanhMucXe\frmThemSuaXe.Designer.cs">
+      <DependentUpon>frmThemSuaXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeThong\CauHinhCSDL\frmCauHinhCSDL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeThong\CauHinhCSDL\frmCauHinhCSDL.Designer.cs">
+      <DependentUpon>frmCauHinhCSDL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeThong\DangNhap\frmDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeThong\DangNhap\frmDangNhap.Designer.cs">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeThong\ThayDoiThongTinDangNhap\frmThayDoiThongTinDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HeThong\ThayDoiThongTinDangNhap\frmThayDoiThongTinDangNhap.Designer.cs">
+      <DependentUpon>frmThayDoiThongTinDangNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow\MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +130,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Common\frmNhapExcel.resx">
+      <DependentUpon>frmNhapExcel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\frmThongTinPhanMem.resx">
+      <DependentUpon>frmThongTinPhanMem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\DanhMucXe\frmDanhSachXe.resx">
+      <DependentUpon>frmDanhSachXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\DanhMucXe\frmThemSuaXe.resx">
+      <DependentUpon>frmThemSuaXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeThong\DangNhap\frmDangNhap.resx">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeThong\ThayDoiThongTinDangNhap\frmThayDoiThongTinDangNhap.resx">
+      <DependentUpon>frmThayDoiThongTinDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainWindow\MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -71,6 +159,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -85,13 +174,131 @@
   <ItemGroup>
     <Folder Include="DanhMuc\DanhMucBaoDuongXe\" />
     <Folder Include="DanhMuc\DanhMucKmHangNgay\" />
-    <Folder Include="DanhMuc\DanhMucThongSoBaoDuong\" />
-    <Folder Include="DanhMuc\DanhMucXe\" />
-    <Folder Include="HeThong\CauHinhCSDL\" />
-    <Folder Include="HeThong\DangNhap\" />
     <Folder Include="HeThong\PhucHoiCSDL\" />
     <Folder Include="HeThong\SaoLuuCSDL\" />
-    <Folder Include="HeThong\ThayDoiThongTinDangNhap\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-return-270-left-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backup.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capture.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cau hoi phong van.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chuyen nganh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Export.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file-export-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file-import-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gia dinh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ismart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kinh nghiem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lock-Lock-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lock-Unlock-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LUU_VA_THEM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Misc-New-Database-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Misc-New-Database-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ngoai ngu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restore.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\secrecy-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SUA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Them.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thong tin chung.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User-Group-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Windows-Close-Program-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\XOA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-validated-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Export-To-File-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filter-add-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filter-delete-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xe_header.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-document-save-as-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report_km_everyday.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Import-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

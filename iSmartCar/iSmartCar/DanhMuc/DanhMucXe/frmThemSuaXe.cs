@@ -6,11 +6,11 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace iSmartCar
+namespace iSmartCar.DanhMuc.DanhMucXe
 {
-    public partial class MainWindow : Form
+    public partial class frmThemSuaXe : Form
     {
-        public MainWindow()
+        public frmThemSuaXe()
         {
             InitializeComponent();
         }
