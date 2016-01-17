@@ -26,7 +26,7 @@ namespace iSmartCar
         #region Contructor
         private GuiResInfoMng()
         {
-            GuiResInfoMng.Instance.SetConnection("Data Source=localhost;Initial Catalog=TanHongHa_db;Integrated Security=True");
+            SetConnection("Data Source=localhost;Initial Catalog=TanHongHa_db;Integrated Security=True");
         }
         #endregion
 
