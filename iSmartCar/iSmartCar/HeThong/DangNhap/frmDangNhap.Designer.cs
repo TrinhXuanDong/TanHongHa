@@ -28,24 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this._txtTaiKhoan = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this._txtMatKhau = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this._btnDangNhap = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // _txtTaiKhoan
             // 
-            this.textBox1.Location = new System.Drawing.Point(122, 161);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(248, 23);
-            this.textBox1.TabIndex = 1;
+            this._txtTaiKhoan.Location = new System.Drawing.Point(122, 161);
+            this._txtTaiKhoan.Margin = new System.Windows.Forms.Padding(4);
+            this._txtTaiKhoan.MaxLength = 50;
+            this._txtTaiKhoan.Name = "_txtTaiKhoan";
+            this._txtTaiKhoan.Size = new System.Drawing.Size(248, 23);
+            this._txtTaiKhoan.TabIndex = 0;
             // 
             // label1
             // 
@@ -57,13 +58,15 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Tài khoản";
             // 
-            // textBox2
+            // _txtMatKhau
             // 
-            this.textBox2.Location = new System.Drawing.Point(122, 217);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(248, 23);
-            this.textBox2.TabIndex = 1;
+            this._txtMatKhau.Location = new System.Drawing.Point(122, 217);
+            this._txtMatKhau.Margin = new System.Windows.Forms.Padding(4);
+            this._txtMatKhau.MaxLength = 50;
+            this._txtMatKhau.Name = "_txtMatKhau";
+            this._txtMatKhau.Size = new System.Drawing.Size(248, 23);
+            this._txtMatKhau.TabIndex = 1;
+            this._txtMatKhau.UseSystemPasswordChar = true;
             // 
             // label2
             // 
@@ -97,17 +100,18 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "(*)";
             // 
-            // button1
+            // _btnDangNhap
             // 
-            this.button1.Image = global::iSmartCar.Properties.Resources.thong_tin_chung;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(185, 248);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 26);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Đăng nhập";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
+            this._btnDangNhap.Image = global::iSmartCar.Properties.Resources.thong_tin_chung;
+            this._btnDangNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this._btnDangNhap.Location = new System.Drawing.Point(185, 248);
+            this._btnDangNhap.Name = "_btnDangNhap";
+            this._btnDangNhap.Size = new System.Drawing.Size(105, 26);
+            this._btnDangNhap.TabIndex = 2;
+            this._btnDangNhap.Text = "Đăng nhập";
+            this._btnDangNhap.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this._btnDangNhap.UseVisualStyleBackColor = true;
+            this._btnDangNhap.Click += new System.EventHandler(this.OnBtnDangNhapMouseClick);
             // 
             // pictureBox1
             // 
@@ -123,17 +127,18 @@
             // 
             // frmDangNhap
             // 
+            this.AcceptButton = this._btnDangNhap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(481, 281);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this._btnDangNhap);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this._txtMatKhau);
+            this.Controls.Add(this._txtTaiKhoan);
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -151,11 +156,11 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox _txtTaiKhoan;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox _txtMatKhau;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button _btnDangNhap;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
     }
