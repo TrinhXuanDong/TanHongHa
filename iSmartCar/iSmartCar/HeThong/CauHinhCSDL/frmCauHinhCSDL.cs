@@ -8,8 +8,6 @@ using System.Xml;
 using System.Windows.Forms;
 using System.Threading;
 using Microsoft.Win32;
-using Microsoft.SqlServer.Management.Smo;
-using Microsoft.SqlServer.Management.Common;
 
 
 namespace iSmartCar
@@ -20,27 +18,9 @@ namespace iSmartCar
         {
             InitializeComponent();
         }
-        Server srv;
-        ServerConnection conn;
 
         private void frmQuanLyCSDL_Load(object sender, EventArgs e)
         {
-            RegistryKey rk = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Microsoft\Microsoft SQL Server");
-            String[] instances = (String[])rk.GetValue("InstalledInstances");
-            if (instances.Length > 0)
-            {
-                foreach (String element in instances)
-                {
-                    if (element == "MSSQLSERVER")
-                    {
-                        cbMayChu.Items.Add(System.Environment.MachineName);
-                    }
-                    else
-                    {
-                        cbMayChu.Items.Add(System.Environment.MachineName + @"\" + element);
-                    }
-                }
-            }
             readXML();
         }
 
@@ -78,14 +58,7 @@ namespace iSmartCar
             try
             {
                 cbTenCSDL.Items.Clear();
-                string sqlSErverInstance;
-                sqlSErverInstance = cbMayChu.SelectedItem.ToString();
-                conn = new ServerConnection(sqlSErverInstance, txtTenDangNhap.Text, txtMatKhau.Text);
-                srv = new Server(conn);
-                foreach (Database db in srv.Databases)
-                {
-                    cbTenCSDL.Items.Add(db.Name);
-                }
+
                 MessageBox.Show("Kết nối thành công, vui lòng chọn tên CSDL");
             }
             catch (Exception err)
