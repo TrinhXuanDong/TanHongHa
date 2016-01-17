@@ -1,4 +1,4 @@
-﻿namespace iSmartCar.Common
+﻿namespace iSmartCar
 {
     partial class frmNhapExcel
     {
@@ -32,15 +32,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this._progressBar = new System.Windows.Forms.ProgressBar();
             this.label4 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this._txtThongBao = new System.Windows.Forms.RichTextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this._btnBatDau = new System.Windows.Forms.Button();
+            this._btnDong = new System.Windows.Forms.Button();
+            this._txtTenFile = new System.Windows.Forms.TextBox();
+            this._btnDuyet = new System.Windows.Forms.Button();
+            this._txtTenSheet = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -87,12 +87,12 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Tên sheet";
             // 
-            // progressBar1
+            // _progressBar
             // 
-            this.progressBar1.Location = new System.Drawing.Point(249, 112);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(287, 23);
-            this.progressBar1.TabIndex = 4;
+            this._progressBar.Location = new System.Drawing.Point(249, 112);
+            this._progressBar.Name = "_progressBar";
+            this._progressBar.Size = new System.Drawing.Size(287, 23);
+            this._progressBar.TabIndex = 4;
             // 
             // label4
             // 
@@ -103,15 +103,15 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "Tiến trình";
             // 
-            // richTextBox1
+            // _txtThongBao
             // 
-            this.richTextBox1.BackColor = System.Drawing.Color.Black;
-            this.richTextBox1.ForeColor = System.Drawing.Color.Red;
-            this.richTextBox1.Location = new System.Drawing.Point(249, 146);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(287, 125);
-            this.richTextBox1.TabIndex = 6;
-            this.richTextBox1.Text = "";
+            this._txtThongBao.BackColor = System.Drawing.Color.Black;
+            this._txtThongBao.ForeColor = System.Drawing.Color.Red;
+            this._txtThongBao.Location = new System.Drawing.Point(249, 146);
+            this._txtThongBao.Name = "_txtThongBao";
+            this._txtThongBao.Size = new System.Drawing.Size(287, 125);
+            this._txtThongBao.TabIndex = 6;
+            this._txtThongBao.Text = "";
             // 
             // label5
             // 
@@ -122,52 +122,58 @@
             this.label5.TabIndex = 7;
             this.label5.Text = "Thông báo";
             // 
-            // button1
+            // _btnBatDau
             // 
-            this.button1.Image = global::iSmartCar.Properties.Resources.ok;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(364, 272);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(83, 27);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Bắt đầu";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
+            this._btnBatDau.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this._btnBatDau.Image = global::iSmartCar.Properties.Resources.ok;
+            this._btnBatDau.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this._btnBatDau.Location = new System.Drawing.Point(364, 272);
+            this._btnBatDau.Name = "_btnBatDau";
+            this._btnBatDau.Size = new System.Drawing.Size(83, 27);
+            this._btnBatDau.TabIndex = 8;
+            this._btnBatDau.Text = "Bắt đầu";
+            this._btnBatDau.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this._btnBatDau.UseVisualStyleBackColor = true;
+            this._btnBatDau.Click += new System.EventHandler(this.OnBtnBatDauMouseClick);
             // 
-            // button2
+            // _btnDong
             // 
-            this.button2.Image = global::iSmartCar.Properties.Resources.Windows_Close_Program_icon;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(453, 272);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(83, 27);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Đóng";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = true;
+            this._btnDong.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this._btnDong.Image = global::iSmartCar.Properties.Resources.Windows_Close_Program_icon;
+            this._btnDong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this._btnDong.Location = new System.Drawing.Point(453, 272);
+            this._btnDong.Name = "_btnDong";
+            this._btnDong.Size = new System.Drawing.Size(83, 27);
+            this._btnDong.TabIndex = 8;
+            this._btnDong.Text = "Đóng";
+            this._btnDong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this._btnDong.UseVisualStyleBackColor = true;
+            this._btnDong.Click += new System.EventHandler(this.OnBtnDongMouseClick);
             // 
-            // textBox1
+            // _txtTenFile
             // 
-            this.textBox1.Location = new System.Drawing.Point(249, 48);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(217, 23);
-            this.textBox1.TabIndex = 9;
+            this._txtTenFile.Location = new System.Drawing.Point(249, 47);
+            this._txtTenFile.Name = "_txtTenFile";
+            this._txtTenFile.ReadOnly = true;
+            this._txtTenFile.Size = new System.Drawing.Size(217, 23);
+            this._txtTenFile.TabIndex = 9;
             // 
-            // button3
+            // _btnDuyet
             // 
-            this.button3.Image = global::iSmartCar.Properties.Resources.Folder_icon;
-            this.button3.Location = new System.Drawing.Point(501, 47);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(35, 23);
-            this.button3.TabIndex = 8;
-            this.button3.UseVisualStyleBackColor = true;
+            this._btnDuyet.Image = global::iSmartCar.Properties.Resources.Folder_icon;
+            this._btnDuyet.Location = new System.Drawing.Point(501, 47);
+            this._btnDuyet.Name = "_btnDuyet";
+            this._btnDuyet.Size = new System.Drawing.Size(35, 23);
+            this._btnDuyet.TabIndex = 8;
+            this._btnDuyet.UseVisualStyleBackColor = true;
+            this._btnDuyet.Click += new System.EventHandler(this.OnBtnDuyetMouseClick);
             // 
-            // textBox2
+            // _txtTenSheet
             // 
-            this.textBox2.Location = new System.Drawing.Point(249, 82);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(136, 23);
-            this.textBox2.TabIndex = 9;
+            this._txtTenSheet.Location = new System.Drawing.Point(249, 82);
+            this._txtTenSheet.Name = "_txtTenSheet";
+            this._txtTenSheet.Size = new System.Drawing.Size(136, 23);
+            this._txtTenSheet.TabIndex = 9;
             // 
             // label6
             // 
@@ -191,19 +197,21 @@
             // 
             // frmNhapExcel
             // 
+            this.AcceptButton = this._btnBatDau;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this._btnDong;
             this.ClientSize = new System.Drawing.Size(544, 301);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this._txtTenSheet);
+            this.Controls.Add(this._txtTenFile);
+            this.Controls.Add(this._btnDuyet);
+            this.Controls.Add(this._btnDong);
+            this.Controls.Add(this._btnBatDau);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this._txtThongBao);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this._progressBar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
@@ -216,7 +224,6 @@
             this.Name = "frmNhapExcel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Import dữ liệu";
-            this.Load += new System.EventHandler(this.frmNhapExcel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -229,15 +236,15 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.ProgressBar _progressBar;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox _txtThongBao;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button _btnBatDau;
+        private System.Windows.Forms.Button _btnDong;
+        private System.Windows.Forms.TextBox _txtTenFile;
+        private System.Windows.Forms.Button _btnDuyet;
+        private System.Windows.Forms.TextBox _txtTenSheet;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
     }

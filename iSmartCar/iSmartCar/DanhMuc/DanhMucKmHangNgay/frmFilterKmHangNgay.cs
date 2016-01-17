@@ -6,14 +6,13 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace iSmartCar
+namespace iSmartCar.DanhMuc.DanhMucKmHangNgay
 {
-    public partial class frmDangNhap : Form
+    public partial class frmFilterKmHangNgay : Form
     {
-        public frmDangNhap()
+        public frmFilterKmHangNgay()
         {
             InitializeComponent();
-            //abcd
         }
     }
 }

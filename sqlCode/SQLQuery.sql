@@ -7,7 +7,7 @@ create database TanHongHa_db
 on primary
 (
 	name= TanHongHa_dbdat,
-	filename='E:\QuanLyBaoDuongXe_04232015\QuanLyBaoDuongXe\bin\database\TanHongHa_dbdat.mdf',
+	filename='E:\TanHongHa_dbdat.mdf',
 	size=10, 
 	maxsize=100,
 	filegrowth=10
@@ -15,7 +15,7 @@ on primary
 log on
 (
 	name=TanHongHa_dblog,
-	filename='E:\QuanLyBaoDuongXe_04232015\QuanLyBaoDuongXe\bin\database\TanHongHa_dblog.ldf',
+	filename='E:\TanHongHa_dblog.ldf',
 	size=1,
 	filegrowth=5
 )

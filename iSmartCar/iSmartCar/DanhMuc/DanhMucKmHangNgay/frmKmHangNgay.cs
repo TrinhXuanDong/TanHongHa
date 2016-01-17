@@ -8,12 +8,11 @@ using System.Windows.Forms;
 
 namespace iSmartCar
 {
-    public partial class frmDangNhap : Form
+    public partial class frmKmHangNgay : Form
     {
-        public frmDangNhap()
+        public frmKmHangNgay()
         {
             InitializeComponent();
-            //abcd
         }
     }
 }

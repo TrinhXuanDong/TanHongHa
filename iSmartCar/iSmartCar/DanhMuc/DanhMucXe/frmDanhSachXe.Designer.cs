@@ -1,4 +1,4 @@
-﻿namespace iSmartCar.DanhMuc.DanhMucXe
+﻿namespace iSmartCar
 {
     partial class frmDanhSachXe
     {
@@ -38,7 +38,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this._btnImportExcel = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.myDataGridView1 = new iSmartCar.MyDataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,7 +60,7 @@
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button6);
             this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this._btnImportExcel);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 368);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
@@ -153,15 +153,16 @@
             this.button5.TabIndex = 0;
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // _btnImportExcel
             // 
-            this.button1.Image = global::iSmartCar.Properties.Resources.Import_icon;
-            this.button1.Location = new System.Drawing.Point(670, 6);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(41, 27);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = true;
+            this._btnImportExcel.Image = global::iSmartCar.Properties.Resources.Import_icon;
+            this._btnImportExcel.Location = new System.Drawing.Point(670, 6);
+            this._btnImportExcel.Margin = new System.Windows.Forms.Padding(4);
+            this._btnImportExcel.Name = "_btnImportExcel";
+            this._btnImportExcel.Size = new System.Drawing.Size(41, 27);
+            this._btnImportExcel.TabIndex = 0;
+            this._btnImportExcel.UseVisualStyleBackColor = true;
+            this._btnImportExcel.Click += new System.EventHandler(this.OnBtnImportExcelMouseClick);
             // 
             // panel1
             // 
@@ -242,7 +243,7 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button _btnImportExcel;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;

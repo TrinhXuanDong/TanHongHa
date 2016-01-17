@@ -70,6 +70,24 @@
     <Compile Include="Common\MyDataGridView.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="DanhMuc\DanhMucKmHangNgay\frmFilterKmHangNgay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\DanhMucKmHangNgay\frmFilterKmHangNgay.Designer.cs">
+      <DependentUpon>frmFilterKmHangNgay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\DanhMucKmHangNgay\frmKmHangNgay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\DanhMucKmHangNgay\frmKmHangNgay.Designer.cs">
+      <DependentUpon>frmKmHangNgay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\DanhMucKmHangNgay\frmThemSuaKmHangNgay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\DanhMucKmHangNgay\frmThemSuaKmHangNgay.Designer.cs">
+      <DependentUpon>frmThemSuaKmHangNgay.cs</DependentUpon>
+    </Compile>
     <Compile Include="DanhMuc\DanhMucXe\frmDanhSachXe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +132,15 @@
     <EmbeddedResource Include="Common\frmThongTinPhanMem.resx">
       <DependentUpon>frmThongTinPhanMem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\DanhMucKmHangNgay\frmFilterKmHangNgay.resx">
+      <DependentUpon>frmFilterKmHangNgay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\DanhMucKmHangNgay\frmKmHangNgay.resx">
+      <DependentUpon>frmKmHangNgay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\DanhMucKmHangNgay\frmThemSuaKmHangNgay.resx">
+      <DependentUpon>frmThemSuaKmHangNgay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\DanhMucXe\frmDanhSachXe.resx">
       <DependentUpon>frmDanhSachXe.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,7 +178,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DanhMuc\DanhMucBaoDuongXe\" />
-    <Folder Include="DanhMuc\DanhMucKmHangNgay\" />
     <Folder Include="HeThong\PhucHoiCSDL\" />
     <Folder Include="HeThong\SaoLuuCSDL\" />
   </ItemGroup>
