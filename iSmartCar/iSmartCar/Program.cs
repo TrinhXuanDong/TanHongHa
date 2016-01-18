@@ -14,7 +14,7 @@ namespace iSmartCar
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmDanhSachXe());
+            Application.Run(new frmFilterKmHangNgay());
         }
     }
 }

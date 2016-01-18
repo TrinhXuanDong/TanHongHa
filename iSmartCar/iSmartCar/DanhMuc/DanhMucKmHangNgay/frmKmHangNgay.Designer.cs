@@ -29,14 +29,6 @@
         private void InitializeComponent()
         {
             this.myDataGridView1 = new iSmartCar.MyDataGridView();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,6 +38,14 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this._btnClose = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this._btnAdd = new System.Windows.Forms.Button();
+            this.btnFilterCanel = new System.Windows.Forms.Button();
+            this._btnFilter = new System.Windows.Forms.Button();
+            this._btnImportExel = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.myDataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -77,99 +77,6 @@
             this.myDataGridView1.RowHeadersVisible = false;
             this.myDataGridView1.Size = new System.Drawing.Size(862, 502);
             this.myDataGridView1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button6);
-            this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 452);
-            this.panel2.Margin = new System.Windows.Forms.Padding(5);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(862, 50);
-            this.panel2.TabIndex = 3;
-            // 
-            // button4
-            // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Image = global::iSmartCar.Properties.Resources.XOA;
-            this.button4.Location = new System.Drawing.Point(785, 8);
-            this.button4.Margin = new System.Windows.Forms.Padding(5);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(59, 35);
-            this.button4.TabIndex = 0;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Image = global::iSmartCar.Properties.Resources.edit_validated_icon;
-            this.button3.Location = new System.Drawing.Point(716, 8);
-            this.button3.Margin = new System.Windows.Forms.Padding(5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(59, 35);
-            this.button3.TabIndex = 0;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Image = global::iSmartCar.Properties.Resources.Them;
-            this.button2.Location = new System.Drawing.Point(647, 8);
-            this.button2.Margin = new System.Windows.Forms.Padding(5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(59, 35);
-            this.button2.TabIndex = 0;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Image = global::iSmartCar.Properties.Resources.filter_delete_icon;
-            this.button6.Location = new System.Drawing.Point(79, 10);
-            this.button6.Margin = new System.Windows.Forms.Padding(5);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(55, 35);
-            this.button6.TabIndex = 0;
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Image = global::iSmartCar.Properties.Resources.filter_add_icon;
-            this.button5.Location = new System.Drawing.Point(16, 10);
-            this.button5.Margin = new System.Windows.Forms.Padding(5);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(55, 35);
-            this.button5.TabIndex = 0;
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Image = global::iSmartCar.Properties.Resources.Import_icon;
-            this.button1.Location = new System.Drawing.Point(581, 8);
-            this.button1.Margin = new System.Windows.Forms.Padding(5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(55, 35);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.myDataGridView1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(5);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(862, 502);
-            this.panel1.TabIndex = 4;
             // 
             // Column4
             // 
@@ -226,6 +133,99 @@
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this._btnClose);
+            this.panel2.Controls.Add(this.btnEdit);
+            this.panel2.Controls.Add(this._btnAdd);
+            this.panel2.Controls.Add(this.btnFilterCanel);
+            this.panel2.Controls.Add(this._btnFilter);
+            this.panel2.Controls.Add(this._btnImportExel);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 452);
+            this.panel2.Margin = new System.Windows.Forms.Padding(5);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(862, 50);
+            this.panel2.TabIndex = 3;
+            // 
+            // _btnClose
+            // 
+            this._btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnClose.Image = global::iSmartCar.Properties.Resources.XOA;
+            this._btnClose.Location = new System.Drawing.Point(785, 8);
+            this._btnClose.Margin = new System.Windows.Forms.Padding(5);
+            this._btnClose.Name = "_btnClose";
+            this._btnClose.Size = new System.Drawing.Size(59, 35);
+            this._btnClose.TabIndex = 0;
+            this._btnClose.UseVisualStyleBackColor = true;
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEdit.Image = global::iSmartCar.Properties.Resources.edit_validated_icon;
+            this.btnEdit.Location = new System.Drawing.Point(716, 8);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(5);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(59, 35);
+            this.btnEdit.TabIndex = 0;
+            this.btnEdit.UseVisualStyleBackColor = true;
+            // 
+            // _btnAdd
+            // 
+            this._btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnAdd.Image = global::iSmartCar.Properties.Resources.Them;
+            this._btnAdd.Location = new System.Drawing.Point(647, 8);
+            this._btnAdd.Margin = new System.Windows.Forms.Padding(5);
+            this._btnAdd.Name = "_btnAdd";
+            this._btnAdd.Size = new System.Drawing.Size(59, 35);
+            this._btnAdd.TabIndex = 0;
+            this._btnAdd.UseVisualStyleBackColor = true;
+            // 
+            // btnFilterCanel
+            // 
+            this.btnFilterCanel.Image = global::iSmartCar.Properties.Resources.filter_delete_icon;
+            this.btnFilterCanel.Location = new System.Drawing.Point(79, 10);
+            this.btnFilterCanel.Margin = new System.Windows.Forms.Padding(5);
+            this.btnFilterCanel.Name = "btnFilterCanel";
+            this.btnFilterCanel.Size = new System.Drawing.Size(55, 35);
+            this.btnFilterCanel.TabIndex = 0;
+            this.btnFilterCanel.UseVisualStyleBackColor = true;
+            // 
+            // _btnFilter
+            // 
+            this._btnFilter.Image = global::iSmartCar.Properties.Resources.filter_add_icon;
+            this._btnFilter.Location = new System.Drawing.Point(16, 10);
+            this._btnFilter.Margin = new System.Windows.Forms.Padding(5);
+            this._btnFilter.Name = "_btnFilter";
+            this._btnFilter.Size = new System.Drawing.Size(55, 35);
+            this._btnFilter.TabIndex = 0;
+            this._btnFilter.UseVisualStyleBackColor = true;
+            // 
+            // _btnImportExel
+            // 
+            this._btnImportExel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._btnImportExel.Image = global::iSmartCar.Properties.Resources.Import_icon;
+            this._btnImportExel.Location = new System.Drawing.Point(581, 8);
+            this._btnImportExel.Margin = new System.Windows.Forms.Padding(5);
+            this._btnImportExel.Name = "_btnImportExel";
+            this._btnImportExel.Size = new System.Drawing.Size(55, 35);
+            this._btnImportExel.TabIndex = 0;
+            this._btnImportExel.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.myDataGridView1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(862, 502);
+            this.panel1.TabIndex = 4;
+            // 
             // frmKmHangNgay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -248,12 +248,12 @@
 
         private MyDataGridView myDataGridView1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button _btnClose;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button _btnAdd;
+        private System.Windows.Forms.Button btnFilterCanel;
+        private System.Windows.Forms.Button _btnFilter;
+        private System.Windows.Forms.Button _btnImportExel;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
