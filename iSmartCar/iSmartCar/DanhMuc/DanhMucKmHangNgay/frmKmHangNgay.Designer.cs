@@ -40,9 +40,9 @@
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this._btnClose = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
+            this._btnEdit = new System.Windows.Forms.Button();
             this._btnAdd = new System.Windows.Forms.Button();
-            this.btnFilterCanel = new System.Windows.Forms.Button();
+            this._btnFilterCanel = new System.Windows.Forms.Button();
             this._btnFilter = new System.Windows.Forms.Button();
             this._btnImportExel = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -136,9 +136,9 @@
             // panel2
             // 
             this.panel2.Controls.Add(this._btnClose);
-            this.panel2.Controls.Add(this.btnEdit);
+            this.panel2.Controls.Add(this._btnEdit);
             this.panel2.Controls.Add(this._btnAdd);
-            this.panel2.Controls.Add(this.btnFilterCanel);
+            this.panel2.Controls.Add(this._btnFilterCanel);
             this.panel2.Controls.Add(this._btnFilter);
             this.panel2.Controls.Add(this._btnImportExel);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -159,18 +159,20 @@
             this._btnClose.Size = new System.Drawing.Size(59, 35);
             this._btnClose.TabIndex = 0;
             this._btnClose.UseVisualStyleBackColor = true;
+            this._btnClose.Click += new System.EventHandler(this.OnBtnCloseClick);
             // 
-            // btnEdit
+            // _btnEdit
             // 
-            this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this._btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEdit.Image = global::iSmartCar.Properties.Resources.edit_validated_icon;
-            this.btnEdit.Location = new System.Drawing.Point(716, 8);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(5);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(59, 35);
-            this.btnEdit.TabIndex = 0;
-            this.btnEdit.UseVisualStyleBackColor = true;
+            this._btnEdit.Image = global::iSmartCar.Properties.Resources.edit_validated_icon;
+            this._btnEdit.Location = new System.Drawing.Point(716, 8);
+            this._btnEdit.Margin = new System.Windows.Forms.Padding(5);
+            this._btnEdit.Name = "_btnEdit";
+            this._btnEdit.Size = new System.Drawing.Size(59, 35);
+            this._btnEdit.TabIndex = 0;
+            this._btnEdit.UseVisualStyleBackColor = true;
+            this._btnEdit.Click += new System.EventHandler(this.OnbtnEditClick);
             // 
             // _btnAdd
             // 
@@ -183,16 +185,18 @@
             this._btnAdd.Size = new System.Drawing.Size(59, 35);
             this._btnAdd.TabIndex = 0;
             this._btnAdd.UseVisualStyleBackColor = true;
+            this._btnAdd.Click += new System.EventHandler(this.OnBtnAddClick);
             // 
-            // btnFilterCanel
+            // _btnFilterCanel
             // 
-            this.btnFilterCanel.Image = global::iSmartCar.Properties.Resources.filter_delete_icon;
-            this.btnFilterCanel.Location = new System.Drawing.Point(79, 10);
-            this.btnFilterCanel.Margin = new System.Windows.Forms.Padding(5);
-            this.btnFilterCanel.Name = "btnFilterCanel";
-            this.btnFilterCanel.Size = new System.Drawing.Size(55, 35);
-            this.btnFilterCanel.TabIndex = 0;
-            this.btnFilterCanel.UseVisualStyleBackColor = true;
+            this._btnFilterCanel.Image = global::iSmartCar.Properties.Resources.filter_delete_icon;
+            this._btnFilterCanel.Location = new System.Drawing.Point(79, 10);
+            this._btnFilterCanel.Margin = new System.Windows.Forms.Padding(5);
+            this._btnFilterCanel.Name = "_btnFilterCanel";
+            this._btnFilterCanel.Size = new System.Drawing.Size(55, 35);
+            this._btnFilterCanel.TabIndex = 0;
+            this._btnFilterCanel.UseVisualStyleBackColor = true;
+            this._btnFilterCanel.Click += new System.EventHandler(this.OntnFilterCanelClick);
             // 
             // _btnFilter
             // 
@@ -203,6 +207,7 @@
             this._btnFilter.Size = new System.Drawing.Size(55, 35);
             this._btnFilter.TabIndex = 0;
             this._btnFilter.UseVisualStyleBackColor = true;
+            this._btnFilter.Click += new System.EventHandler(this.OnBtnFilterClick);
             // 
             // _btnImportExel
             // 
@@ -215,6 +220,7 @@
             this._btnImportExel.Size = new System.Drawing.Size(55, 35);
             this._btnImportExel.TabIndex = 0;
             this._btnImportExel.UseVisualStyleBackColor = true;
+            this._btnImportExel.Click += new System.EventHandler(this.BtnImportExelClick);
             // 
             // panel1
             // 
@@ -249,9 +255,9 @@
         private MyDataGridView myDataGridView1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button _btnClose;
-        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button _btnEdit;
         private System.Windows.Forms.Button _btnAdd;
-        private System.Windows.Forms.Button btnFilterCanel;
+        private System.Windows.Forms.Button _btnFilterCanel;
         private System.Windows.Forms.Button _btnFilter;
         private System.Windows.Forms.Button _btnImportExel;
         private System.Windows.Forms.Panel panel1;
