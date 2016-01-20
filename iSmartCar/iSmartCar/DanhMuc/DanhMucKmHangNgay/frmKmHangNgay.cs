@@ -11,12 +11,25 @@ namespace iSmartCar
     public partial class frmKmHangNgay : Form
     {
         private frmNhapExcel _frmNhapExcel = null;
-        public List<string> errLst; 
+        public List<string> ErrLst; 
+        private const int IndexOfCollumKmTua = 8;
 
         public frmKmHangNgay()
         {
             InitializeComponent();
+            LoadData(_dataGridView);
         }
+
+        #region Method
+
+        private void LoadData(DataGridView dataGridView)
+        {
+            string sql = string.Format("select * from KmHangNgay");
+            DataTable dataTable = GuiResInfoMng.Instance.GetDataTable(sql);
+            dataGridView.DataSource = dataTable;
+        }
+
+        #endregion
 
         private void BtnImportExelClick(object sender, EventArgs e)
         {
@@ -34,7 +47,7 @@ namespace iSmartCar
                 _frmNhapExcel = new frmNhapExcel();
             }
 
-            errLst.Clear();
+            ErrLst.Clear();
             _frmNhapExcel.OnImportFinish += FrmNhapExcelOnOnImportFinish;
             _frmNhapExcel.OnImportProcess += FrmNhapExcelOnOnImportProcess;
             _frmNhapExcel.Show();
@@ -48,7 +61,7 @@ namespace iSmartCar
         private void FrmNhapExcelOnOnImportProcess(DataRow dataRow, int index)
         {
             //Xử lý từng dòng exel tại đây
-            if(isValidData(dataRow,index))
+            if(IsValidData(dataRow,index))
             {
                 //Insert vao Db
             }
@@ -59,7 +72,7 @@ namespace iSmartCar
         /// </summary>
         private void FrmNhapExcelOnOnImportFinish()
         {
-            _frmNhapExcel.ShowLog(errLst);
+            _frmNhapExcel.ShowLog(ErrLst);
         }
 
         private void OnBtnAddClick(object sender, EventArgs e)
@@ -74,12 +87,12 @@ namespace iSmartCar
 
         private void OnBtnCloseClick(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void OnBtnFilterClick(object sender, EventArgs e)
         {
-            frmFilterKmHangNgay frm = new frmFilterKmHangNgay();
+            var frm = new frmFilterKmHangNgay();
             frm.Show();
         }
 
@@ -96,40 +109,40 @@ namespace iSmartCar
         /// <param name="dataRow"></param>
         /// <param name="index"></param>
         /// <returns></returns>
-        private bool isValidData(DataRow dataRow, int index)
+        private bool IsValidData(DataRow dataRow, int index)
         {
             if(!isNullRow(dataRow))
             {
-                errLst.Add("Dòng: " +index + " - Trống dữ liệu." );
+                ErrLst.Add("Dòng: " +index + " - Trống dữ liệu." );
                 return false;
             }
 
             if (!isFullDataImportant(dataRow))
             {
-                errLst.Add("Dòng: " + index + " - Thiếu thông tin quan tọng như ngày, tháng năm ...");
+                ErrLst.Add("Dòng: " + index + " - Thiếu thông tin quan tọng như ngày, tháng năm ...");
             }
 
             if (!isNullRow(dataRow))
             {
-                errLst.Add("Dòng: " + index + " - Trống dữ liệu.");
+                ErrLst.Add("Dòng: " + index + " - Trống dữ liệu.");
                 return false;
             }
 
             if (!isExist(dataRow))
             {
-                errLst.Add("Dòng: " + index + " - Đã có trong cơ sở dữ liệu.");
+                ErrLst.Add("Dòng: " + index + " - Đã có trong cơ sở dữ liệu.");
                 return false;
             }
 
             if (!isVaildKmDiWithExel(dataRow))
             {
-                errLst.Add("Dòng: " + index + " - Km thực tế không khớp với Exel đã nhập.");
+                ErrLst.Add("Dòng: " + index + " - Km thực tế không khớp với Exel đã nhập.");
                 return false;
             }
 
             if (!isVaildNumber(dataRow))
             {
-                errLst.Add("Dòng: " + index + " - Dữ liệu ngày, tháng, năm .. không phải là số.");
+                ErrLst.Add("Dòng: " + index + " - Dữ liệu ngày, tháng, năm .. không phải là số.");
                 return false;
             }
             return true;
@@ -142,17 +155,17 @@ namespace iSmartCar
         /// <returns></returns>
         private bool isNullRow(DataRow dataRow)
         {
-            int lengthOfRow = dataRow.ItemArray.Length;
+            var lengthOfRow = dataRow.ItemArray.Length;
             if (lengthOfRow <= 0)
             {
                 return false;
             }
             else
             {
-                for (int i = 0; i < lengthOfRow; i++)
+                for (var i = 0; i < lengthOfRow; i++)
                 {
                     //cot so 8 la KM tua. không có không sao
-                    if (true == dataRow[i].Equals("") && i != 8)
+                    if (true == dataRow[i].Equals("") && i != IndexOfCollumKmTua)
                     {
                         return false;
                     }
