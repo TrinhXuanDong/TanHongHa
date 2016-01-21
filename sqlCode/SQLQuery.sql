@@ -80,3 +80,5 @@ CREATE TABLE ChiTietBaoDuongXe (
 	foreign key (MaBaoDuong) references BaoDuongXe(MaBaoDuong),
 	foreign key (MaThongSoBaoDuong) references ThongSoBaoDuong(MaThongSoBaoDuong)
 );
+
+sadlkfjakl
