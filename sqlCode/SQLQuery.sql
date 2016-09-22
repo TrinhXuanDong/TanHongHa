@@ -81,4 +81,4 @@ CREATE TABLE ChiTietBaoDuongXe (
 	foreign key (MaThongSoBaoDuong) references ThongSoBaoDuong(MaThongSoBaoDuong)
 );
 
-sadlkfjakl
+121231123312
